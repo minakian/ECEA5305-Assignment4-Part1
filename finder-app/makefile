@@ -16,6 +16,10 @@ TARGET = writer
 # Object files
 OBJ = $(SRC:.c=.o)
 
+# Default target
+.PHONY: all
+all: $(TARGET)
+
 # Compile the source files
 $(TARGET): $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
